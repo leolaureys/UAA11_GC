@@ -1,18 +1,10 @@
-import Fonctions_GSC as fg
+import Fonctions_GSC as F_GSC
 
 salle_cinema = []
 
-logueur_ligne = 3
-logueur_colone = 5
+nbr_ligne = 3
+nbr_colone = 5
 
-for i in range(1,0,logueur_ligne):
-    ligne = []
-    for j in range(1,0,logueur_colone):
-        ligne.append("#")
-        salle_cinema.append(ligne)
+F_GSC.create_tableaux(salle_cinema, nbr_ligne, nbr_colone)
 
-for i in salle_cinema:
-            to_display = "" 
-            for casse in i:
-                to_display += casse + " "
-            print(to_display)   
+F_GSC.print_tableaux(salle_cinema)   
