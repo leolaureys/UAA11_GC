@@ -4,13 +4,13 @@ def print_tableaux(tableaux):
     for ligne in tableaux:
             affichage = "" 
             for casse in ligne:
-                affichage += casse + " "
+                affichage += f"{casse:<3}"
             print(affichage)
 
 def create_tableaux(tableaux, nbr_ligne, nbr_colone):
     
-    nbr_ligne = int(input("Choisiser le nombre de rangée ===> "))
-    nbr_colone = int(input("Choisiser le nombre de colonne ===> "))
+    nbr_ligne = int(input("\nChoisiser le nombre de rangée ===> "))
+    nbr_colone = int(input("\nChoisiser le nombre de colonne ===> "))
 
     nbr_ligne += 1
     nbr_colone += 1
@@ -27,8 +27,10 @@ def create_tableaux(tableaux, nbr_ligne, nbr_colone):
                     lettre = chr(64 + i)
                     ligne.append(f"{lettre}")
                 else:
-                    ligne.append("○")#■
+                    ligne.append("□")#■
             tableaux.append(ligne)
     tableaux[0][0] = " "
-    
-   
+
+def reserver_place():
+    ligne_p = input("\nChoisiser la rangée (A, B, C, ...) ===> ")
+    colone_P = int(input("\nChoisiser le nombre de colonne ===> "))   
