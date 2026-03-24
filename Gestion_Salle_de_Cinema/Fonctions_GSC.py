@@ -9,6 +9,9 @@ def print_tableaux(tableaux):
 
 def create_tableaux(tableaux, nbr_ligne, nbr_colone):
     
+    nbr_ligne = int(input("Choisiser le nombre de rangée ===> "))
+    nbr_colone = int(input("Choisiser le nombre de colonne ===> "))
+
     nbr_ligne += 1
     nbr_colone += 1
 
@@ -24,8 +27,8 @@ def create_tableaux(tableaux, nbr_ligne, nbr_colone):
                     lettre = chr(64 + i)
                     ligne.append(f"{lettre}")
                 else:
-                    ligne.append("□")#■
+                    ligne.append("○")#■
             tableaux.append(ligne)
     tableaux[0][0] = " "
     
-    
+   
