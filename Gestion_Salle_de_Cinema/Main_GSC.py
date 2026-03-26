@@ -9,8 +9,6 @@ continuer_code = True
 
 choix = 1
 
-F_GSC.create_tableaux(salle_cinema, nbr_ligne, nbr_colone)
-
 while continuer_code == True:
 
     F_GSC.print_menu()
