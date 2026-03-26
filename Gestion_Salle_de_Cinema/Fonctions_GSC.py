@@ -1,14 +1,14 @@
 def print_menu():
-    print("\n\n|============= MENU ==============|")
-    print("|                                 |")
-    print("| 1 : afficher la salle           |")
-    print("| 2 : réservée une place          |")
-    print("| 3 : annuler une réservation     |")
-    print("| 4 : V.P.D.                      |")
-    print("| 5 : N.P.R.D.                    |")
-    print("| 6 : I.N.S.                      |")
-    print("| 7 : Quitter                     |")
-    print("|_________________________________|")
+    print("\n\n|=========================== MENU ============================|")
+    print("|                                                             |")
+    print("| 1 : afficher la salle                                       |")
+    print("| 2 : réservée une place                                      |")
+    print("| 3 : annuler une réservation                                 |")
+    print("| 4 : vériffier si un place est disponible                    |")
+    print("| 5 : compter le nombre de place                              |")
+    print("| 6 : inisialitation d'une nouvelle salle                     |")
+    print("| 7 : Quitter                                                 |")
+    print("|_____________________________________________________________|")
 
 
 def print_tableaux(tableaux):
@@ -20,7 +20,6 @@ def print_tableaux(tableaux):
             print(affichage)
 
 def create_tableaux(tableaux, nbr_ligne, nbr_colone):
-    tableaux = []
 
     nbr_ligne = int(input("\nChoisiser le nombre de rangée ===> "))
     nbr_colone = int(input("\nChoisiser le nombre de colonne ===> "))

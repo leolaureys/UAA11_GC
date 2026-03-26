@@ -7,7 +7,7 @@ nbr_colone = 0
 
 continuer_code = True
 
-choix = 1
+choix = 6
 
 while continuer_code == True:
 
@@ -25,6 +25,7 @@ while continuer_code == True:
     elif choix == 5:
         F_GSC.compter_place(salle_cinema)
     elif choix == 6:
+        salle_cinema = []
         F_GSC.create_tableaux(salle_cinema, nbr_ligne, nbr_colone)
     elif choix == 7:
         continuer_code = False
