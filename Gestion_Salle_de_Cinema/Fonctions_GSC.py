@@ -1,10 +1,13 @@
+def print_menu():
+    print("\n\n|============= MENU ==============|\n|                                 |\n| 1 : afficher la salle           |\n| 2 : réservée une place          |\n| 3 : annuler une réservation     |\n| 4 : V.P.D.                      |\n| 5 : N.P.R.D.                    |\n| 6 : I.N.S.                      |\n| 7 : Quitter                     |\n|_________________________________|")
 
 
 def print_tableaux(tableaux):
+    print("\n")
     for ligne in tableaux:
             affichage = "" 
-            for casse in ligne:
-                affichage += f"{casse:<3}"
+            for case in ligne:
+                affichage += f"{case:<3}"
             print(affichage)
 
 def create_tableaux(tableaux, nbr_ligne, nbr_colone):
@@ -31,6 +34,80 @@ def create_tableaux(tableaux, nbr_ligne, nbr_colone):
             tableaux.append(ligne)
     tableaux[0][0] = " "
 
-def reserver_place():
-    ligne_p = input("\nChoisiser la rangée (A, B, C, ...) ===> ")
-    colone_P = int(input("\nChoisiser le nombre de colonne ===> "))   
+def reserver_place(tableaux):
+    try:
+        ligne_p = input("\nChoisiser la rangée (A, B, C, ...) ===> ")
+        ligne_p = ligne_p.lower()
+        ligne_p = ord(ligne_p) - 96
+        colone_p = int(input("\nChoisiser le nombre de colonne ===> "))   
+
+        if tableaux[ligne_p][colone_p] == "■":
+
+            print("\nPlace déja réservée !")
+
+        elif tableaux[ligne_p][colone_p] == "□":
+
+            tableaux[ligne_p][colone_p] = "■"
+            print("\nPlace réservée !")
+
+        else:
+            print("\nErreur place invalide !")
+
+    except(ValueError):
+        print("\n\nEreur place invalide !")
+
+def delete_reservation(tableaux):
+    try:
+        ligne_p = input("\nChoisiser la rangée (A, B, C, ...) ===> ")
+        ligne_p = ligne_p.lower()
+        ligne_p = ord(ligne_p) - 96
+        colone_p = int(input("\nChoisiser le nombre de colonne ===> "))   
+
+        if tableaux[ligne_p][colone_p] == "□":
+
+            print("\nPlace non-réservée !")
+
+        elif tableaux[ligne_p][colone_p] == "■":
+
+            tableaux[ligne_p][colone_p] = "□"
+            print("\nréservation annuler !")
+
+        else:
+            print("\nErreur place invalide !")
+
+    except(ValueError):
+        print("\n\nErreur place invalide !")
+
+def place_disponible(tableaux):
+    try:
+        ligne_p = input("\nChoisiser la rangée (A, B, C, ...) ===> ")
+        ligne_p = ligne_p.lower()
+        ligne_p = ord(ligne_p) - 96
+        colone_p = int(input("\nChoisiser le nombre de colonne ===> "))   
+
+        if tableaux[ligne_p][colone_p] == "□":
+
+            print("\nPlace disponible !")
+
+        elif tableaux[ligne_p][colone_p] == "■":
+
+            print("\nPlace indisponible !")
+
+        else:
+            print("\nErreur place invalide !")
+
+    except(ValueError):
+        print("\n\nErreur place invalide !")
+
+def compter_place(tableaux):
+
+    p_vide = 0
+    p_reserv = 0
+
+    for ligne in tableaux:
+            for case in ligne:
+                if case == "□":
+                    p_vide += 1
+                elif case == "■":
+                    p_reserv += 1
+    print(f"\n\nIl y a {p_vide} place disponible et {p_reserv} place réservée !")
