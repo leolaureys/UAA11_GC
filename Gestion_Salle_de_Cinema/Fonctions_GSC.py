@@ -22,7 +22,13 @@ def print_tableaux(tableaux):
 
 def create_tableaux(tableaux, nbr_ligne, nbr_colone):
 
-    nbr_ligne = int(input("\nChoisiser le nombre de rangée ===> "))
+    nbr_ligne = int(input("\nChoisiser le nombre de rangée (Max: 26 )===> "))
+
+    if  nbr_ligne > 26:
+        while nbr_ligne > 26:      
+            print("\nVous avez selectioner un nombre de ranger trop grands !")
+            nbr_ligne = int(input("\nChoisiser le nombre de rangée (Max: 26 )===> "))
+
     nbr_colone = int(input("\nChoisiser le nombre de colonne ===> "))
 
     nbr_ligne += 1
