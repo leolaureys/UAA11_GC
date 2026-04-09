@@ -10,8 +10,11 @@ continuer_code = True
 
 choix = 6
 
-print("\nVeulliez inisialiser une salle l'or du lancement !\n")
+print("\nLancement Du Programme !\n")
 time.sleep(2.5)
+print("\nInitialisation De La Salle !\n\n")
+time.sleep(1.5)
+F_GSC.create_tableaux(salle_cinema, nbr_ligne, nbr_colone)
 
 while continuer_code == True:
 

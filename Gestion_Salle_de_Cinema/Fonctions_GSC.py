@@ -1,3 +1,5 @@
+import time
+
 def print_menu():
     print("\n\n|=========================== MENU ============================|")
     print("|                                                             |")
@@ -15,9 +17,11 @@ def print_tableaux(tableaux):
     print("\n")
     for ligne in tableaux:
             affichage = "" 
+            time.sleep(0.6)
             for case in ligne:
                 affichage += f"{case:<3}"
             print(affichage)
+            
 
 
 def create_tableaux(tableaux, nbr_ligne, nbr_colone):
@@ -26,7 +30,8 @@ def create_tableaux(tableaux, nbr_ligne, nbr_colone):
 
     if  nbr_ligne > 26:
         while nbr_ligne > 26:      
-            print("\nVous avez selectioner un nombre de ranger trop grands !")
+            print("\n\nVous avez selectioner un nombre de ranger trop grands !\n")
+            time.sleep(2)
             nbr_ligne = int(input("\nChoisiser le nombre de rangée (Max: 26 )===> "))
 
     nbr_colone = int(input("\nChoisiser le nombre de colonne ===> "))
@@ -72,6 +77,8 @@ def reserver_place(tableaux):
 
     except(ValueError):
         print("\n\nEreur place invalide !")
+    except(TypeError):
+        print("\n\nEreur place invalide !")
 
 
 def delete_reservation(tableaux):
@@ -95,7 +102,8 @@ def delete_reservation(tableaux):
 
     except(ValueError):
         print("\n\nErreur place invalide !")
-
+    except(TypeError):
+        print("\n\nEreur place invalide !")
 
 def place_disponible(tableaux):
     try:
@@ -117,7 +125,8 @@ def place_disponible(tableaux):
 
     except(ValueError):
         print("\n\nErreur place invalide !")
-
+    except(TypeError):
+        print("\n\nEreur place invalide !")
 
 def compter_place(tableaux):
 
