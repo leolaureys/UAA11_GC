@@ -1,4 +1,5 @@
 import Fonctions_GSC as F_GSC
+import time
 
 salle_cinema = []
 
@@ -8,6 +9,9 @@ nbr_colone = 0
 continuer_code = True
 
 choix = 6
+
+print("\nVeulliez inisialiser une salle l'or du lancement !\n")
+time.sleep(2.5)
 
 while continuer_code == True:
 
