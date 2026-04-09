@@ -19,6 +19,7 @@ def print_tableaux(tableaux):
                 affichage += f"{case:<3}"
             print(affichage)
 
+
 def create_tableaux(tableaux, nbr_ligne, nbr_colone):
 
     nbr_ligne = int(input("\nChoisiser le nombre de rangée ===> "))
@@ -43,6 +44,7 @@ def create_tableaux(tableaux, nbr_ligne, nbr_colone):
             tableaux.append(ligne)
     tableaux[0][0] = " "
 
+
 def reserver_place(tableaux):
     try:
         ligne_p = input("\nChoisiser la rangée (A, B, C, ...) ===> ")
@@ -64,6 +66,7 @@ def reserver_place(tableaux):
 
     except(ValueError):
         print("\n\nEreur place invalide !")
+
 
 def delete_reservation(tableaux):
     try:
@@ -87,6 +90,7 @@ def delete_reservation(tableaux):
     except(ValueError):
         print("\n\nErreur place invalide !")
 
+
 def place_disponible(tableaux):
     try:
         ligne_p = input("\nChoisiser la rangée (A, B, C, ...) ===> ")
@@ -107,6 +111,7 @@ def place_disponible(tableaux):
 
     except(ValueError):
         print("\n\nErreur place invalide !")
+
 
 def compter_place(tableaux):
 
