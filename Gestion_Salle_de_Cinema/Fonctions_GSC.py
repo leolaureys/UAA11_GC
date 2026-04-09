@@ -79,6 +79,10 @@ def reserver_place(tableaux):
         print("\n\nEreur place invalide !")
     except(TypeError):
         print("\n\nEreur place invalide !")
+    except(KeyError):
+        print("\n\nEreur place invalide !")
+    except(IndexError):
+        print("\n\nEreur place invalide !")
 
 
 def delete_reservation(tableaux):
@@ -104,6 +108,10 @@ def delete_reservation(tableaux):
         print("\n\nErreur place invalide !")
     except(TypeError):
         print("\n\nEreur place invalide !")
+    except(KeyError):
+        print("\n\nEreur place invalide !")
+    except(IndexError):
+        print("\n\nEreur place invalide !")
 
 def place_disponible(tableaux):
     try:
@@ -126,6 +134,10 @@ def place_disponible(tableaux):
     except(ValueError):
         print("\n\nErreur place invalide !")
     except(TypeError):
+        print("\n\nEreur place invalide !")
+    except(KeyError):
+        print("\n\nEreur place invalide !")
+    except(IndexError):
         print("\n\nEreur place invalide !")
 
 def compter_place(tableaux):
