@@ -25,36 +25,43 @@ def print_tableaux(tableaux):
 
 
 def create_tableaux(tableaux, nbr_ligne, nbr_colone):
+    try:
+        nbr_ligne = int(input("\nChoisiser le nombre de rangée (Max: 26 )===> "))
 
-    nbr_ligne = int(input("\nChoisiser le nombre de rangée (Max: 26 )===> "))
+        if  nbr_ligne > 26:
+            while nbr_ligne > 26:      
+                print("\n\nVous avez selectioner un nombre de ranger trop grands !\n")
+                time.sleep(2)
+                nbr_ligne = int(input("\nChoisiser le nombre de rangée (Max: 26 )===> "))
 
-    if  nbr_ligne > 26:
-        while nbr_ligne > 26:      
-            print("\n\nVous avez selectioner un nombre de ranger trop grands !\n")
-            time.sleep(2)
-            nbr_ligne = int(input("\nChoisiser le nombre de rangée (Max: 26 )===> "))
+        nbr_colone = int(input("\nChoisiser le nombre de colonne ===> "))
 
-    nbr_colone = int(input("\nChoisiser le nombre de colonne ===> "))
+        nbr_ligne += 1
+        nbr_colone += 1
 
-    nbr_ligne += 1
-    nbr_colone += 1
-
-    for i in range(nbr_ligne):
-        ligne = []
-        if i == 0:
-            for j in range(nbr_colone):
-                ligne.append(f"{j}")
-            tableaux.append(ligne)
-        else:
-            for j in range(nbr_colone):
-                if j == 0:
-                    lettre = chr(64 + i)
-                    ligne.append(f"{lettre}")
-                else:
-                    ligne.append("□")#■
-            tableaux.append(ligne)
-    tableaux[0][0] = " "
-
+        for i in range(nbr_ligne):
+            ligne = []
+            if i == 0:
+                for j in range(nbr_colone):
+                    ligne.append(f"{j}")
+                tableaux.append(ligne)
+            else:
+                for j in range(nbr_colone):
+                    if j == 0:
+                        lettre = chr(64 + i)
+                        ligne.append(f"{lettre}")
+                    else:
+                        ligne.append("□")#■
+                tableaux.append(ligne)
+        tableaux[0][0] = " "
+    except(ValueError):
+        print("\n\nErreur invalide !")
+    except(TypeError):
+        print("\n\nEreur invalide !")
+    except(KeyError):
+        print("\n\nEreur invalide !")
+    except(IndexError):
+        print("\n\nEreur invalide !")
 
 def reserver_place(tableaux):
     try:
@@ -76,13 +83,13 @@ def reserver_place(tableaux):
             print("\nErreur place invalide !")
 
     except(ValueError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
     except(TypeError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
     except(KeyError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
     except(IndexError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
 
 
 def delete_reservation(tableaux):
@@ -105,13 +112,13 @@ def delete_reservation(tableaux):
             print("\nErreur place invalide !")
 
     except(ValueError):
-        print("\n\nErreur place invalide !")
+        print("\n\nErreur invalide !")
     except(TypeError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
     except(KeyError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
     except(IndexError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
 
 def place_disponible(tableaux):
     try:
@@ -132,13 +139,13 @@ def place_disponible(tableaux):
             print("\nErreur place invalide !")
 
     except(ValueError):
-        print("\n\nErreur place invalide !")
+        print("\n\nErreur invalide !")
     except(TypeError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
     except(KeyError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
     except(IndexError):
-        print("\n\nEreur place invalide !")
+        print("\n\nEreur invalide !")
 
 def compter_place(tableaux):
 
