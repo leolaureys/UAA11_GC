@@ -54,14 +54,9 @@ def create_tableaux(tableaux, nbr_ligne, nbr_colone):
                         ligne.append("□")#■
                 tableaux.append(ligne)
         tableaux[0][0] = " "
-    except(ValueError):
-        print("\n\nErreur invalide !")
-    except(TypeError):
-        print("\n\nEreur invalide !")
-    except(KeyError):
-        print("\n\nEreur invalide !")
-    except(IndexError):
-        print("\n\nEreur invalide !")
+    
+    except Exception as e:
+       print(f"\nUne erreur est survenue < {e} >") 
 
 def reserver_place(tableaux):
     try:
@@ -82,14 +77,8 @@ def reserver_place(tableaux):
         else:
             print("\nErreur place invalide !")
 
-    except(ValueError):
-        print("\n\nEreur invalide !")
-    except(TypeError):
-        print("\n\nEreur invalide !")
-    except(KeyError):
-        print("\n\nEreur invalide !")
-    except(IndexError):
-        print("\n\nEreur invalide !")
+    except Exception as e:
+       print(f"\nUne erreur est survenue < {e} >") 
 
 
 def delete_reservation(tableaux):
@@ -111,14 +100,8 @@ def delete_reservation(tableaux):
         else:
             print("\nErreur place invalide !")
 
-    except(ValueError):
-        print("\n\nErreur invalide !")
-    except(TypeError):
-        print("\n\nEreur invalide !")
-    except(KeyError):
-        print("\n\nEreur invalide !")
-    except(IndexError):
-        print("\n\nEreur invalide !")
+    except Exception as e:
+       print(f"\nUne erreur est survenue < {e} >") 
 
 def place_disponible(tableaux):
     try:
@@ -138,14 +121,8 @@ def place_disponible(tableaux):
         else:
             print("\nErreur place invalide !")
 
-    except(ValueError):
-        print("\n\nErreur invalide !")
-    except(TypeError):
-        print("\n\nEreur invalide !")
-    except(KeyError):
-        print("\n\nEreur invalide !")
-    except(IndexError):
-        print("\n\nEreur invalide !")
+    except Exception as e:
+       print(f"\nUne erreur est survenue < {e} >") 
 
 def compter_place(tableaux):
 
