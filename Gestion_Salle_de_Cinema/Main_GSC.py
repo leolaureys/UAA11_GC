@@ -23,19 +23,27 @@ while continuer_code == True:
 
     if choix == 1:
         F_GSC.print_tableaux(salle_cinema)
+        time.sleep(2.5)
     elif choix == 2:
         F_GSC.reserver_place(salle_cinema)
+        time.sleep(2.5)
     elif choix == 3:
         F_GSC.delete_reservation(salle_cinema)
+        time.sleep(2.5)
     elif choix == 4:
         F_GSC.place_disponible(salle_cinema)
+        time.sleep(2.5)
     elif choix == 5:
         F_GSC.compter_place(salle_cinema)
+        time.sleep(2.5)
     elif choix == 6:
         salle_cinema = []
         F_GSC.create_tableaux(salle_cinema, nbr_ligne, nbr_colone)
+        print("\nSalle initialisée !")
+        time.sleep(2.5)
     elif choix == 7:
         continuer_code = False
-        print("Au revoir !")
+        print("\nAu revoir !")
+        time.sleep(2.5)
     else:
         print("Choix non-valide !")
